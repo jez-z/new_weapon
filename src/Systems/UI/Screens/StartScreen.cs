@@ -12,11 +12,16 @@ namespace new_weapon.src.Systems.UI.Screens
                                 return instance;
                         }
                 }
-                public readonly string template = "START";
+                public readonly string message = "START \n----------------------\nWelcome to\nNEW WEAPON";
 
-                public override void Instantiate(string template)
+                public override void Instantiate(string message)
                 {
-                        base.Instantiate(template);
+                        base.Instantiate(message);
+                }
+
+                public override void InstantiateCenter(string message)
+                {
+                        base.InstantiateCenter(message);
                 }
         }
 }

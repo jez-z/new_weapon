@@ -1,17 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System;
-using System.Net.Http.Headers;
-using new_weapon.src.Items.Weapons.Guns;
-using new_weapon.src.NPCs.Groups.Stalkers;
+
 using new_weapon.src.Systems.UI.Screens;
+using new_weapon.src.Systems.Input;
 
 class Program
 {
         static void Main(string[] args)
         {
                 StartScreen start = StartScreen.Instance;
+                start.InstantiateCenter(start.message);
 
-                start.Instantiate(start.template);
+                Input input = new()
+                {
+                        show_input = true
+                };
+                input.CreateInputField(out _, "Enter something: ");
         }
 }
 
